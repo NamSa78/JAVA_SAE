@@ -24,7 +24,7 @@ class DijkstraTest {
 
 	@Test
 	void test() {
-		VarGraph g = new GrapheHHAdj();
+		VarGraph<S> g = new GrapheHHAdj();
 		g.peupler(GRAPH1);
 		tester(g);
 	}
@@ -42,14 +42,14 @@ class DijkstraTest {
 
 	@Test
 	void pasDeValuationNegative() {
-		VarGraph g = new GrapheHHAdj();
+		VarGraph<S> g = new GrapheHHAdj();
 		g.peupler(GRAPH_NEG);
 		assertThrows(IllegalArgumentException.class,
 				()->  dijkstra.compute(g, FROM));
 	}
 	@Test
 	void utilisationDuResultat() {
-		 VarGraph g = new GrapheHHAdj();
+		 VarGraph<S> g = new GrapheHHAdj();
 		 g.peupler(GRAPH1);
 		 Distances<String> dst = dijkstra.compute(g, FROM);
 		 System.out.println("Graphe : " + g);

@@ -26,15 +26,15 @@ public class GraphListeTest {
     @Test
     void testGetSuccesseurAvecArcs() {
         GraphListe<String> graph = new GraphListe<>();
-        new Graph.Arc<>(3, "B");
-        new Graph.Arc<>(5, "C");
+        graph.ajouterArc("A", "B", 3);
+        graph.ajouterArc("A", "C", 5);
 
         List<Graph.Arc<String>> expected = List.of(
                 new Graph.Arc<>(3, "B"),
                 new Graph.Arc<>(5, "C")
         );
 
-        assertEquals(expected, graph.getSucc("B"), "Les successeurs de A ne sont pas corrects.");
+        assertEquals(expected, graph.getSucc("A"), "Les successeurs de A ne sont pas corrects.");
 
     }
 }
