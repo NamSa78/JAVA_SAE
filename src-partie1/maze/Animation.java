@@ -1,11 +1,10 @@
-package Maze;
+package maze;
 
 import java.awt.Color;
 import java.util.List;
 
 import graph.Graph;
 import graph.ShortestPath.Distances;
-import maze.Maze;
 import maze.algorithms.Generators;
 import maze.panel.MazeView;
 import maze.regular.RegularMaze;
