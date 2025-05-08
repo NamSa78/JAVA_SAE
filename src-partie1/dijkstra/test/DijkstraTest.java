@@ -6,6 +6,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.List;
 import graph.Graph;
+import graph.GrapheHHAdj;
 import graph.ShortestPath.Distances;
 import graph.VarGraph;
 import org.junit.jupiter.api.Test;
@@ -23,7 +24,7 @@ class DijkstraTest {
 
 	@Test
 	void test() {
-		VarGraph<S> g = new GrapheHHAdj();
+		VarGraph<String> g = new GrapheHHAdj();
 		g.peupler(GRAPH1);
 		tester(g);
 	}
@@ -41,14 +42,14 @@ class DijkstraTest {
 
 	@Test
 	void pasDeValuationNegative() {
-		VarGraph<S> g = new GrapheHHAdj();
+		VarGraph<String> g = new GrapheHHAdj();
 		g.peupler(GRAPH_NEG);
 		assertThrows(IllegalArgumentException.class,
 				()->  dijkstra.compute(g, FROM));
 	}
 	@Test
 	void utilisationDuResultat() {
-		 VarGraph<S> g = new GrapheHHAdj();
+		 VarGraph<String> g = new GrapheHHAdj();
 		 g.peupler(GRAPH1);
 		 Distances<String> dst = dijkstra.compute(g, FROM);
 		 System.out.println("Graphe : " + g);
