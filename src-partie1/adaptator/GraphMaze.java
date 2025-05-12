@@ -1,25 +1,26 @@
 package adaptator;
 
 import graph.Graph;
-import maze.Maze;
+import maze.regular.RegularMaze;
 
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public class GraphMaze<T> implements Graph<T> {
 
-    private final Maze<T> maze;
+public class GraphMaze implements Graph<Integer> {
 
-    public GraphMaze(Maze<T> maze) {
+    private final RegularMaze maze;
+
+    public GraphMaze(RegularMaze maze) {
         this.maze = maze;
     }
 
     @Override
-    public List<Arc<T>> getSucc(T from) {
-        Set<T> opened = maze.openedNeighbours(from);
+    public List<Arc<Integer>> getSucc(Integer from) {
+        Set<Integer> opened = maze.openedNeighbours(from);
         return opened.stream()
-                .map(to -> new Arc<>(1, to)) // tous les arcs ont un coût de 1
+                .map(to -> new Arc<>(1, to))
                 .collect(Collectors.toList());
     }
 }

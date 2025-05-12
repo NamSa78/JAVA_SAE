@@ -4,7 +4,7 @@ import java.util.*;
 
 public class GrapheHHAdj implements VarGraph<String> {
     //Attribut : Une liste D'adjacence qui associe chaque sommet a ces successeur.
-    private Map<String, List<Arc<String>>> noeudVersSucceseur;
+    private final Map<String, List<Arc<String>>> noeudVersSucceseur;
 
     //Constructeur d'une HashMap pour la liste D'adjacence
     public GrapheHHAdj() {
