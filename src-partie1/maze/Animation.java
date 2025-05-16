@@ -33,7 +33,7 @@ public class Animation {
 				(pos, dist) -> {
 					view.annotate(pos, Integer.toString(dist));
 					view.repaint();
-					pause(100);
+					pause(5);
 				}
 		);
 		if (dst.dist().get(end) == null)

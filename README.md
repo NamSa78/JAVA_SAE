@@ -7,6 +7,11 @@ groupe : 107
 
 --> Partie I teminée. 
 
---> Partie II a faire : 
+--> Implémentation de l'interface VarGraph à classe GraphHHAdj + passage des tests fait par Mathis Morel.
 
-1) adaptation de la classe Dijkstra pour les labyrinthes et animation Graphique
+--> Partie II terminée. 
+
+--> Implémentation de l'interface Graph à la classe GraphMaze + utilisation de l'interface Maze pour les méthodes passage de tous les bench, fait par : Maxence Amalfi + Mathis Morel.
+
+--> Définition de la hérarchie des classes (packages, liens, héritages), fait par : Maxence Amalfi 
+
