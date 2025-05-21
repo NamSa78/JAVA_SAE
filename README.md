@@ -1,7 +1,7 @@
 # JAVA_SAE
 github pour la création de la SAE 2.02 2025
 
-Mathis MOREL, Maxence AMALFI, Niel GIUSTIGNANO 
+Mathis MOREL, Maxence AMALFI, Neal GIUSTIGNANO 
 
 groupe : 107
 
